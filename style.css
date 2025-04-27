@@ -1,0 +1,300 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: radial-gradient(#000000, #ffffff);
+  text-align: center;
+}
+
+/* h1 {
+  color: #ffffff;
+  font-size: 2rem;
+} */
+
+h1 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #a72d65;
+  margin-top: 10px;
+  background-color: #ffe6f2;
+  padding: 15px 25px;
+  border-radius: 20px;
+  box-shadow: 0 0 15px #e057b2;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin: 20px 115px;
+}
+
+.gallery img {
+  width: 200px;
+  height: auto;
+  border-radius: 10px;
+  /* transition: transform 1s ease; */
+  transition: transform 0.1s ease, box-shadow 0.3s ease;
+
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+button {
+  margin-top: 20px;
+  padding: 11px 22px;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 600;
+  color: #a72d65;
+  background-color: #ffe6f2;
+  border-radius: 20px;
+  box-shadow: 0 0 15px #e057b2;
+}
+
+button:hover {
+  background-color: #f593c1;
+}
+
+/* Slideshow container */
+.slideshow {
+  display: none;
+  margin-top: 30px;
+}
+
+#slideshow-img {
+  width: 500px;
+  max-width: 90%;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  animation: fade 6s ease-in-out;
+}
+
+#caption {
+  font-style: italic;
+  font-size: 1.1rem;
+  color: #a72d65;
+  padding: 1px 15px;
+  border-radius: 10px;
+  display: block;
+  margin: 15px auto;
+  /* width: 19%; */
+  background-color: #ffe6f2;
+  box-shadow: 0 0 15px #e057b2;
+  width: auto;
+  max-width: 90%;
+
+}
+
+
+
+#heartfelt-message-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background: radial-gradient(#000000, #ffffff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  text-align: center;
+  padding: 30px;
+}
+
+#heartfelt-text {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #a72d65;
+  display: block;
+  margin-top: 40px auto;
+  max-width: 600px;
+  text-align: center;
+  background-color: #ffe6f2;
+  padding: 15px 25px;
+  border-radius: 20px;
+  box-shadow: 0 0 15px #e057b2;
+}
+
+span {
+  font-weight: bold;
+  font-size: 1.3rem;
+
+}
+
+
+#end-message {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background: radial-gradient(#000000, #ffffff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  text-align: center;
+  animation: fade 2s ease-in-out;
+}
+
+#end-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #a72d65;
+  background-color: #ffe6f2;
+  padding: 20px 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 15px #e057b2;
+}
+
+
+
+.fade-out {
+  animation: fadeOut 2s ease forwards;
+}
+
+/* .fade-in {
+  animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+} */
+
+
+
+
+
+/* Animation for end message */
+@keyframes popIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+
+/* Fade effect for slideshow images */
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+#main-heading.fade-out {
+  animation: fadeOut 1s ease forwards;
+}
+
+
+
+/* =================================================== */
+/* Responsive Design: Mobile and Tablet */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.4rem;
+    padding: 10px 20px;
+  }
+
+  .gallery {
+    gap: 10px;
+    margin: 20px 20px;
+    padding: 0 10px;
+  }
+
+  .gallery img {
+    width: 120px;
+    height: auto;
+  }
+
+  button {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+
+  #slideshow-img {
+    width: 95%;
+    max-width: 90vw;
+  }
+
+  #caption {
+    font-size: 1rem;
+    padding: 8px 12px;
+    width: 70%;
+    max-width: 90%;
+  }
+
+  #heartfelt-text {
+    font-size: 1rem;
+    padding: 12px 18px;
+  }
+
+  #end-text {
+    font-size: 1.2rem;
+    padding: 15px 20px;
+  }
+
+  span {
+    font-size: 1.1rem;
+  }
+}
+
+
+@media (max-width: 700px) {
+  #heartfelt-message-screen {
+    font-size: 1.2rem;
+    /* chhoti screens ke liye font chhota */
+    padding: 10px;
+    /* thoda kam padding */
+  }
+
+  #heartfelt-message-screen span {
+    font-size: 1rem;
+    /* agar span ke text ko alag se highlight karna ho */
+  }
+}
+
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.2rem;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  .gallery img {
+    width: 90%;
+  }
+
+  #caption {
+    font-size: 0.9rem;
+  }
+}
